@@ -11,7 +11,9 @@ function Home() {
   }, [])
 
   const getData = async () => {
-    const response = await axios.get("http://localhost:4000/")
+    const response = await axios.get(
+      "https://contactsmanager-api.onrender.com/"
+    )
 
     if (response.status === 200) {
       setData(response.data)
@@ -23,7 +25,9 @@ function Home() {
       "Are you sure you want to delete? Click Ok to confirm!"
     )
     if (confirm) {
-      const response = await axios.delete(`http://localhost:4000/delete/${id}`)
+      const response = await axios.delete(
+        `https://contactsmanager-api.onrender.com/${id}`
+      )
 
       if (response.status === 200) {
         toast.success("User deleted Successfully!")

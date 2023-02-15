@@ -13,7 +13,9 @@ function View() {
   }, [id])
 
   const getUser = async (id) => {
-    const response = await axios.get(`http://localhost:4000/view/${id}`)
+    const response = await axios.get(
+      `https://contactsmanager-api.onrender.com/view/${id}`
+    )
     if (response.status === 200) {
       setUser({ ...response.data })
     }

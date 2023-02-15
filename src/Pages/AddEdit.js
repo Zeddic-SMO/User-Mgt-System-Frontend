@@ -25,7 +25,9 @@ const AddEdit = () => {
   }, [id])
   // get a specific user
   const getSpecificUser = async (id) => {
-    const response = await axios.get(`http://localhost:4000/view/${id}`)
+    const response = await axios.get(
+      `https://contactsmanager-api.onrender.com/view/${id}`
+    )
 
     if (response.status === 200) {
       setValues({ ...response.data })
@@ -35,7 +37,7 @@ const AddEdit = () => {
   // handling update
   const handleUpdate = async (id, values) => {
     const response = await axios.put(
-      `http://localhost:4000/update/${id}`,
+      `https://contactsmanager-api.onrender.com/${id}`,
       values
     )
     if (response.status === 200) {
@@ -84,7 +86,10 @@ const AddEdit = () => {
 
   // Submit values to the database
   const submitData = async (values) => {
-    const response = await axios.post("http://localhost:4000/add", values)
+    const response = await axios.post(
+      "https://contactsmanager-api.onrender.com/add",
+      values
+    )
     if (response.status === 200) {
       toast.success("New User Added Successfully!")
     }
