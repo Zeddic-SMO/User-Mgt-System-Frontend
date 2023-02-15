@@ -76,7 +76,7 @@ function Home() {
                     <td>{user.fullName}</td>
                     <td>{user.phone}</td>
                     <td>{user.email}</td>
-                    <td className="text-center">
+                    <td className="text-center flex">
                       <NavLink to={`/view/${user._id}`}>
                         <button className="p-2 bg-light mx-1 md:mx-3 rounded-sm hover:bg-warm">
                           View

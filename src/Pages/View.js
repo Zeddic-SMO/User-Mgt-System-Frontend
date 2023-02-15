@@ -28,8 +28,8 @@ function View() {
 
   const { fullName, phone, email } = user
   return (
-    <div className="p-[100px]">
-      <form className="w-[90%] md:w-[50%] mx-auto p-2 rounded-lg shadow-warm shadow-sm">
+    <div className="px-[50px] py-[150px] md:p-[100px]">
+      <form className="w-full md:w-[50%] mx-auto p-2 rounded-lg shadow-warm shadow-sm">
         <div>
           <label htmlFor="name" className="text-warm font-bold">
             Full Name:
