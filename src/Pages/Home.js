@@ -26,7 +26,7 @@ function Home() {
     )
     if (confirm) {
       const response = await axios.delete(
-        `https://contactsmanager-api.onrender.com/${id}`
+        `https://contactsmanager-api.onrender.com/delete/${id}`
       )
 
       if (response.status === 200) {

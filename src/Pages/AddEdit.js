@@ -37,7 +37,7 @@ const AddEdit = () => {
   // handling update
   const handleUpdate = async (id, values) => {
     const response = await axios.put(
-      `https://contactsmanager-api.onrender.com/${id}`,
+      `https://contactsmanager-api.onrender.com/update/${id}`,
       values
     )
     if (response.status === 200) {
